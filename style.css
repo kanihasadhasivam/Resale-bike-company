@@ -1,0 +1,380 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+.navbar{
+  box-shadow:0 10px 10px rgba(0, 0, 0, 0.3) ;
+  position: sticky;
+}
+.hide{
+  gap: 50px;
+}
+.hide .cut{
+  display: none;
+  border: none;
+  background: transparent;
+}
+
+#openBtn{
+	color: #f0a697;
+	padding: 8px 15px;
+	border: none;
+	border-radius: 8px;
+}
+#openBtn:hover{
+	background-color: #753c8f;
+}
+
+.navbar .form-control:focus{
+  border-color:#753c8f ;
+  box-shadow:1px 1px 10px #753c8f  ;
+}
+.modal .form-control:focus{
+  border-color:#753c8f ;
+  box-shadow:1px 1px 10px #753c8f  ;
+}
+@media(max-width: 1085px){
+.hide{
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    height: 150vh;
+    width: 280px;
+    top: 0;
+    left: 0;
+    padding: 5rem 1.5rem;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    display: flex;
+  }
+  .hide .cut.show{
+    display: block;
+  }
+  .head.show{
+    opacity: 0.1;
+}
+  .hide a{
+    border: 1px solid black;
+    width: 200px;
+    padding: 10px ;
+    border-radius: 20px;
+    text-align: center;
+     border-color:#753c8f ;
+  box-shadow:1px 1px 10px #753c8f  ;
+  }
+  .hide #search{
+     border: 1px solid black;
+    width: 200px;
+    padding: 10px ;
+    border-radius: 20px;
+    text-align: center;
+     border-color:#753c8f ;
+  box-shadow:1px 1px 10px #753c8f  ;
+  }
+   .hide.show{
+    display: flex;
+    transform: translateX(0);
+  }
+ 
+  .navbar-brand{
+    display: block;
+    margin-left: 80px;
+  }
+  .navbar-toggle{
+    position: absolute;
+    right: 20px;
+  }
+  .navbar-toggler{
+    position: absolute;
+    top: 10px;
+    border: none;
+  }
+
+
+}
+@media(max-width: 480px){
+   .navbar-toggle{
+    position: absolute;
+    right: 10px;
+  }
+  .navbar-brand{
+  
+    margin-left: 60px;
+  }
+}
+
+.modal {
+  display: none; /* hidden by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+  background: white;
+  width: 400px;
+  height: 100vh;
+  margin: 100px auto;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+#closeBtn {
+  float: right;
+  cursor: pointer;
+}
+
+.modal .bangalore{
+  border: 1px solid #e2e8f0;
+  border-radius: 15px;
+  padding: 30px;
+  margin-left: 30px;
+}
+
+.modal .chennai{
+  border: 1px solid #e2e8f0;
+  border-radius: 15px;
+  padding: 30px;
+  margin-left: 30px;
+}
+.modal .coimbatore{
+  border: 1px solid #e2e8f0;
+  border-radius: 15px;
+  padding: 30px;
+  margin-left: 30px;
+}
+.popular{
+  position: relative;
+}
+
+@media(max-width: 550px){
+  .popular .coimbatore{
+    position: absolute;
+    left: 10px;
+    top: 150px;
+
+  }
+  .modal #city{
+    position: absolute;
+    margin-top: 82vh;
+  }
+
+.modal-content {
+  height: 150vh;
+}
+}
+.row .col{
+  border: 1px solid;
+  margin: 10px;
+  border-radius: 10px;
+  padding: 8px 20px;
+}
+
+.head{
+  margin-top: 20px;
+  height: 80vh;
+  background-image: url("main.jpg");
+  background-size: cover;
+ background-position: center;
+  background-attachment: fixed;
+  position: relative;
+
+}
+
+.bar{
+  position: absolute;
+  top: 150px;
+  left: 100px;
+  background-color: #fff3eb;
+  padding: 15px;
+  border-radius: 10px;
+  
+}
+.bar h6{
+  color: #f06728;
+}
+
+.bar button{
+  padding: 8px 100px;
+  border: none;
+  border-radius: 25px;
+  background-color: #e84430;
+  color:#fff3eb ;
+}
+.why{
+  display: grid;
+  grid-template-columns: repeat(5, 230px);
+  gap: 80px;
+}
+
+.why div{
+  border: 1px solid;
+  padding: 20px;
+  border-radius: 20px;
+  background-color: #f2e6ef;
+}
+@media(max-width: 1214px){
+  .why{
+  display: grid;
+  grid-template-columns: repeat(3, 300px);
+  gap: 50px;
+}
+.why .transfer{
+  grid-column-end:3 ;
+  grid-column-start: 2;
+}
+}
+@media(max-width: 1056px){
+   .why{
+  display: grid;
+  grid-template-columns: repeat(2, 380px); 
+}
+}
+@media(max-width: 880px){
+   .why{
+   display: flex; 
+   flex-direction: column;
+
+}
+.bar{
+  margin-left: -40px;
+}
+
+}
+
+.choose a:focus{
+  border-bottom: 5px solid #00857a;
+  padding-bottom: 10px;
+  border-radius: 5px;
+}
+.budget{
+  display: none;
+}
+
+.contact{
+  background-color: #f4efe5;
+ height: 80vh;
+  margin-top: 25px;
+}
+.contactus{
+  min-width: 250px;
+  line-height: 26px;
+}
+.contactus button{
+  padding: 10px 50px;
+  border: none;
+  border-radius: 10px;
+  background-color: #e84430;
+  color:#fff3eb ;
+  margin: 5px;
+}
+.update{
+  min-width: 250px;
+
+}
+.update input{
+  margin-top: 20px;
+  margin-bottom: 10px;
+  width: 350px;
+  padding: 8px ;
+  border: none;
+  border-radius: 2px;
+}
+.update button{
+  padding: 10px 50px;
+  border: none;
+  border-radius: 10px;
+  background-color: #e84430;
+  color:#fff3eb ;
+  margin-top: 20px;
+}
+@media(max-width: 990px){
+  .contact{
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+     height: 95vh;
+  }
+  .update{
+    margin-right: 100px;
+  }
+}
+@media(max-width: 552px){
+  .contactus .bn{
+    display: flex;
+    flex-direction: column;
+
+  }
+  .update{
+    margin-right: 0px;
+  }
+ 
+}
+
+.card img{
+  height: 200px;
+  object-fit: cover;
+}
+
+.card:hover{
+  transform: scale(1.03);
+  transition: 0.3s;
+}
+
+
+.sale{
+  margin-top: 30px;
+  height: 150vh;
+  width: 100%;
+  background-color: #868e96;
+  
+}
+.sale .int{
+  height: 130vh;
+  width: 80%;
+  position: absolute;
+  top: 30vh;
+  left: 100px;
+  background-color: #f5f5f5;
+  padding: 50px;
+
+}
+.sale .int input{
+  width: 100%;
+  padding: 6px;
+  margin: 10px;
+}
+.sale .int h4{
+  margin-top: 20px;
+}
+
+.sale .int button{
+    padding: 10px 50px;
+  border: none;
+  border-radius: 10px;
+  background-color: #e84430;
+  color:#fff3eb ;
+  margin-top: 20px;
+}
+.sale .int input:focus{
+    border-color:#753c8f ;
+  box-shadow:1px 1px 10px #753c8f  ;
+}
+@media(max-width: 920px){
+  .sale .int .int1{
+    display: flex;
+    flex-direction: column;
+  }
+  .sale .int{
+  height: 250vh;
+  left: 10px;
+}
+.sale{
+  height: 290vh;
+  margin-right: 50px;
+}
+}
